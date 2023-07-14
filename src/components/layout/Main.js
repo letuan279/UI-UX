@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useHistory } from "react-router-dom";
 import { Layout, Drawer, Affix } from "antd";
 import Sidenav from "./Sidenav";
 import Header from "./Header";
 import Footer from "./Footer";
+import { useData } from "../../context/AppContext";
 
 const { Header: AntHeader, Content, Sider } = Layout;
 
@@ -29,6 +30,14 @@ function Main({ children }) {
       setPlacement("right");
     }
   }, [pathname]);
+
+  const { user } = useData()
+  const history = useHistory();
+  useEffect(() => {
+    if (user === null) {
+      history.push('/sign-in')
+    }
+  }, [user])
 
   return (
     <Layout

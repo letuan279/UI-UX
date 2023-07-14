@@ -5,6 +5,7 @@ const AppContext = createContext();
 
 const AppContextProvider = ({ children }) => {
     const [dataJson, setDataJson] = useState(data)
+    const [user, setUser] = useState(null)
 
     console.log(dataJson);
 
@@ -12,7 +13,9 @@ const AppContextProvider = ({ children }) => {
         <AppContext.Provider value={
             {
                 dataJson,
-                setDataJson
+                setDataJson,
+                user,
+                setUser
             }
         }>
             {children}

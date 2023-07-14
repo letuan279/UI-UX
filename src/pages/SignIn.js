@@ -20,6 +20,7 @@ import {
   InstagramOutlined,
   GithubOutlined,
 } from "@ant-design/icons";
+import { useData } from "../context/AppContext";
 function onChange(checked) {
   console.log(`switch to ${checked}`);
 }
@@ -118,13 +119,18 @@ const SignIn = () => {
   };
 
   const history = useHistory();
+  const { setUser } = useData()
 
   const handleLogin = () => {
     const username = document.getElementById("email").value
     const password = document.getElementById("password").value
-    if (username !== "quan@gmail.com" && password !== "1234") {
+    if (username !== "quan@gmail.com" || password !== "1234") {
       message.warning("Tài khoản hoặc mật khẩu không đúng")
     } else {
+      setUser({
+        username,
+        password
+      })
       message.success("Đăng nhập thành công!!")
       history.push('/dashboard')
     }

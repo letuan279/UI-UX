@@ -100,7 +100,7 @@ function Sidenav({ color }) {
         <Menu.Item className="menu-item-header" key="5">
           Cá nhân
         </Menu.Item>
-        <Menu.Item key="2">
+        <Menu.Item key="10">
           <NavLink to="/personal/tasks">
             <span
               className="icon"
@@ -113,7 +113,7 @@ function Sidenav({ color }) {
             <span className="label">Danh sách công việc</span>
           </NavLink>
         </Menu.Item>
-        <Menu.Item key="2">
+        <Menu.Item key="11">
           <NavLink to="/personal/kanban">
             <span
               className="icon"
@@ -139,7 +139,7 @@ function Sidenav({ color }) {
             <span className="label">Lịch</span>
           </NavLink>
         </Menu.Item> */}
-        <Menu.Item className="menu-item-header" key="5">
+        <Menu.Item className="menu-item-header" key="14">
           Nhóm
         </Menu.Item>
         <Menu.Item key="3">
