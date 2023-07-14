@@ -232,12 +232,12 @@ const SignIn = () => {
                     Đăng nhập
                   </Button>
                 </Form.Item>
-                <p className="font-semibold text-muted">
+                {/* <p className="font-semibold text-muted">
                   Bạn chưa có tài khoản?{" "}
                   <span to="/" className="text-dark font-bold">
                     Đăng ký
                   </span>
-                </p>
+                </p> */}
               </Form>
             </Col>
             {/* <Col
